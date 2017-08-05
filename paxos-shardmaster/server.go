@@ -5,7 +5,7 @@ import "fmt"
 import "net/rpc"
 import "log"
 
-import "paxos"
+import "github.com/chewr/6.824-2016/paxos"
 import "sync"
 import "sync/atomic"
 import "os"
@@ -24,11 +24,9 @@ type ShardMaster struct {
 	configs []Config // indexed by config num
 }
 
-
 type Op struct {
 	// Your data here.
 }
-
 
 func (sm *ShardMaster) Join(args *JoinArgs, reply *JoinReply) error {
 	// Your code here.

@@ -5,15 +5,14 @@ import "fmt"
 import "net/rpc"
 import "log"
 import "time"
-import "paxos"
+import "github.com/chewr/6.824-2016/paxos"
 import "sync"
 import "sync/atomic"
 import "os"
 import "syscall"
 import "encoding/gob"
 import "math/rand"
-import "shardmaster"
-
+import "github.com/chewr/6.824-2016/shardmaster"
 
 const Debug = 0
 
@@ -24,11 +23,9 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 	return
 }
 
-
 type Op struct {
 	// Your definitions here.
 }
-
 
 type ShardKV struct {
 	mu         sync.Mutex
@@ -43,7 +40,6 @@ type ShardKV struct {
 
 	// Your definitions here.
 }
-
 
 func (kv *ShardKV) Get(args *GetArgs, reply *GetReply) error {
 	// Your code here.
@@ -114,7 +110,6 @@ func StartServer(gid int64, shardmasters []string,
 	rpcs.Register(kv)
 
 	kv.px = paxos.Make(servers, me, rpcs)
-
 
 	os.Remove(servers[me])
 	l, e := net.Listen("unix", servers[me])

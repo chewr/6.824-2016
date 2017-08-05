@@ -12,7 +12,7 @@ package main
 // instead of a and b.
 
 import "time"
-import "lockservice"
+import "github.com/chewr/6.824-2016/lockservice"
 import "os"
 import "fmt"
 

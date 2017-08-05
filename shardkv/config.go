@@ -1,7 +1,7 @@
 package shardkv
 
-import "shardmaster"
-import "labrpc"
+import "github.com/chewr/6.824-2016/shardmaster"
+import "github.com/chewr/6.824-2016/labrpc"
 import "testing"
 import "os"
 
@@ -11,7 +11,7 @@ import "math/rand"
 import "encoding/base64"
 import "sync"
 import "runtime"
-import "raft"
+import "github.com/chewr/6.824-2016/raft"
 import "strconv"
 
 func randstring(n int) string {

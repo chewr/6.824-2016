@@ -1,6 +1,6 @@
 package raftkv
 
-import "labrpc"
+import "github.com/chewr/6.824-2016/labrpc"
 import "testing"
 import "os"
 
@@ -10,7 +10,7 @@ import "math/rand"
 import "encoding/base64"
 import "sync"
 import "runtime"
-import "raft"
+import "github.com/chewr/6.824-2016/raft"
 
 func randstring(n int) string {
 	b := make([]byte, 2*n)

@@ -1,6 +1,6 @@
 package diskv
 
-import "shardmaster"
+import "github.com/chewr/6.824-2016/shardmaster"
 import "net/rpc"
 import "time"
 import "sync"

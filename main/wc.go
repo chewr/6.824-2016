@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mapreduce"
+	"github.com/chewr/6.824-2016/mapreduce"
 	"os"
 )
 

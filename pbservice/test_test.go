@@ -1,6 +1,6 @@
 package pbservice
 
-import "viewservice"
+import "github.com/chewr/6.824-2016/viewservice"
 import "fmt"
 import "io"
 import "net"

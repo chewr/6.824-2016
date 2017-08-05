@@ -1,9 +1,8 @@
 package raftkv
 
-import "labrpc"
+import "github.com/chewr/6.824-2016/labrpc"
 import "crypto/rand"
 import "math/big"
-
 
 type Clerk struct {
 	servers []*labrpc.ClientEnd

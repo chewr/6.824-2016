@@ -5,7 +5,7 @@ package main
 //
 
 import "time"
-import "viewservice"
+import "github.com/chewr/6.824-2016/viewservice"
 import "os"
 import "fmt"
 
