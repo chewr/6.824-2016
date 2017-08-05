@@ -1,4 +1,4 @@
-package main
+package server
 
 //
 // see directions in pbc.go

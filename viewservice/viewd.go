@@ -1,11 +1,10 @@
-package main
+package viewservice
 
 //
 // see directions in pbc.go
 //
 
 import "time"
-import "github.com/chewr/6.824-2016/viewservice"
 import "os"
 import "fmt"
 
@@ -15,7 +14,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	viewservice.StartServer(os.Args[1])
+	StartServer(os.Args[1])
 
 	for {
 		time.Sleep(100 * time.Second)
