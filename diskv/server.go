@@ -201,7 +201,7 @@ func StartServer(gid int64, shardmasters []string,
 	kv := new(DisKV)
 	kv.me = me
 	kv.gid = gid
-	kv.sm = shardmaster.MakeClerk(shardmasters)
+	kv.sm = shardmaster.MakeClerk(nil)
 	kv.dir = dir
 
 	// Your initialization code here.

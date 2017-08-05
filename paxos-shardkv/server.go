@@ -101,7 +101,7 @@ func StartServer(gid int64, shardmasters []string,
 	kv := new(ShardKV)
 	kv.me = me
 	kv.gid = gid
-	kv.sm = shardmaster.MakeClerk(shardmasters)
+	kv.sm = shardmaster.MakeClerk(nil)
 
 	// Your initialization code here.
 	// Don't call Join().
