@@ -1,4 +1,4 @@
-package main
+package diskv
 
 //
 // start a diskvd server. it's a member of some replica
@@ -16,7 +16,6 @@ package main
 //   -r restart
 
 import "time"
-import "github.com/chewr/6.824-2016/diskv"
 import "os"
 import "fmt"
 import "strconv"
@@ -64,7 +63,7 @@ func main() {
 
 	runtime.GOMAXPROCS(4)
 
-	srv := diskv.StartServer(gid, masters, replicas, me, dir, restart)
+	srv := StartServer(gid, masters, replicas, me, dir, restart)
 	srv.Setunreliable(unreliable)
 
 	// for safety, force quit after 10 minutes.
